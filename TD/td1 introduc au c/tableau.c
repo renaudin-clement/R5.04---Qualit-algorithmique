@@ -1,20 +1,18 @@
 #include <stdio.h>
 
 
+void
+affichertableau(int tab[],int tai){
+    for (int i = 0; i<tai; i++){
 
-int main(void){
-
-    int tab[10] = {1,2,-3,-4,5,6,7,8,9,10};
-    tab[7] =35;
-
-    for (int i = 0; i<10; i++){
-        printf("tableau ligne [%d] = %d ",i,tab[i]);
-        if (i % 3==2){
+        //printf("tableau ligne [%d] = %d ",i,tab[i]);
+        printf("[%d] ",tab[i]);
+        if (i % 2==1){
             printf("\n");
         }
     }
     printf("\n");
-    return 0;
+
 }
 
 
@@ -40,4 +38,17 @@ triSelection(int tab[], int taille) {
             tab[i_min] = tmp;
         }
     }
+    affichertableau(tab,10);
+}
+
+
+
+int main(void){
+    int tab[10] = {1,2,-3,-4,5,6,7,8,9,10};
+    tab[7] =35;
+    affichertableau(tab,10);
+    printf("\n");
+    triSelection(tab,10);
+
+    return 0;
 }
