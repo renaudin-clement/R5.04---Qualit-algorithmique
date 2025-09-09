@@ -34,12 +34,28 @@ c operation preference
 
 ### trier algo
 
-algo (radix sort) = O(n+m) m= plus grande valeur du tableau
+>algo (radix sort) = O(n+m) m= plus grande valeur du tableau  
 ---
-quick-sort (en moyenne)
-ftc sort fr python          = O(nlogn)
-merge sort - tri fusion
----
-tri par insertion
-quick sort (precis) => O(n²)
-tri par selection
+>quick-sort (en moyenne)  
+>ftc sort fr python          = O(nlogn)  
+>merge sort - tri fusion  
+---  
+>tri par insertion  
+>quick sort (precis) => O(n²)  
+>tri par selection  
+
+### les maillons et structure
+    struct maillon {
+        int val;
+        struct maillon * suivant;
+    };
+
+si m est un struc maillon m a deux champs;  
+
+        int m.val;  
+
+-m.suivront est un printeur sur une struc maillon  
+
+    (struct maillon)* m.suivant
+    ||
+    (Struc maillon) *(m.suivant)
