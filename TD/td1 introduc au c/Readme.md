@@ -30,3 +30,16 @@ sur 32 bits [-2³¹;2³¹-1]
 
 ---
 c operation preference
+
+
+### trier algo
+
+algo (radix sort) = O(n+m) m= plus grande valeur du tableau
+---
+quick-sort (en moyenne)
+ftc sort fr python          = O(nlogn)
+merge sort - tri fusion
+---
+tri par insertion
+quick sort (precis) => O(n²)
+tri par selection
