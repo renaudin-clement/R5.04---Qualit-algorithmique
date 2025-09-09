@@ -59,3 +59,19 @@ si m est un struc maillon m a deux champs;
     (struct maillon)* m.suivant
     ||
     (Struc maillon) *(m.suivant)
+
+---
+on creer une vairalble x et on creer un pointeur qui regarde a ca memoire  
+
+int x = 3;  
+int *px = &x;  
+
+*px = *px + 1  
+// quelle sera la valeur de x?
+4
+car on augmente la valeur de x grace a *px +;
+
+mais 
+
+px =+ 1;  
+x vaut toujours 4 mais on change lendroit ou le pointeur regarde ( dangereux) 
