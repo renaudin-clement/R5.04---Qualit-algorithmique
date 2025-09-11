@@ -36,6 +36,27 @@ liste insere_en_tete(liste l ,int v){
     
 }
 
+liste supprime_tete(liste l){
+    liste next = l->suivant;
+    free(l);
+    return next;
+}
+
+struct  maillion* recherche(liste l , int x){
+if (l ==NULL){
+    return NULL;
+}
+if (l->val == x){
+    return l;
+} else {
+    return recherche(l->suivant,x);
+}
+
+
+}
+
+
+
 int main(){
     liste liste_vide = NULL;
     struct maillon depart = {0,NULL};
