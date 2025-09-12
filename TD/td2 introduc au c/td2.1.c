@@ -43,15 +43,14 @@ liste supprime_tete(liste l){
 }
 
 struct  maillion* recherche(liste l , int x){
-if (l ==NULL){
-    return NULL;
-}
-if (l->val == x){
-    return l;
-} else {
-    return recherche(l->suivant,x);
-}
-
+    if (l ==NULL){
+        return NULL;
+    }
+    if (l->val == x){
+        return l;
+    } else {
+        return recherche(l->suivant,x);
+    }
 
 }
 

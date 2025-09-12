@@ -75,3 +75,58 @@ mais
 
 px =+ 1;  
 x vaut toujours 4 mais on change lendroit ou le pointeur regarde ( dangereux) 
+
+---
+
+### recap hexa
+
+    0101 0010
+    OX5   2
+
+    4*16 = 64
+    64 = OX40
+    'A' = 65 = OX41
+
+    OX52
+    -OX41
+    ------
+    OX11 = 'R'
+
+### aligment
+
+dans la representation en memoire d'une struct, chaque champ doit  
+commencer à une adresse qui est multiple de la taille des mots de  
+l'architecture (ici,32 bits)
+
+
+
+---
+### struct
+
+>.  
+>    struct obj1 {char c; unsigned int i};    
+>._________________1 octet  4 octet  
+>
+> mais la taille doit etre un multiple de 4
+
+    < c > // // // <----i----->
+      0    1  2  3  4  5  6  7
+
+---
+Obj1.c =='R'  
+<br>
+obj1.i == OX1f8  
+
+---
+### union
+quand on est dans une union on utilise la place au meme endroit
+
+
+      0    1  2  3 
+    < c > <----i----->
+    objet.c
+    <---------------->
+         obj2.i
+    
+obj2.c == 'R' == obj1.c
+obj2.i ==Ox52 00 00 00
