@@ -43,7 +43,14 @@ liste supprime_tete(liste l){
     return next;
 }
 
-struct  maillion* recherche(liste l , int x){
+void supprimerListe(liste l){
+    while ((l !=NULL)){
+        l=supprime_tete(l);
+    }
+    
+}
+
+struct  maillon* recherche(liste l , int x){
     if (l ==NULL){
         return NULL;
     }
