@@ -23,6 +23,10 @@ int longueur(liste l);
 struct maillon* recherche(liste l, int x);
 
 liste supprimerListe(liste l);
+
+
+
+
 liste inserer(liste l, int val, int i);
 liste supprimerEnTete(liste l);
 liste supprimer(liste l, int i);

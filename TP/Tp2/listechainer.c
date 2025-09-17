@@ -30,7 +30,7 @@ void affiche(liste l){
 }
 
 liste insere_en_tete(liste l ,int v){
-    struct  maillion *  p_tete = malloc(sizeof(struct maillion *));
+    struct maillon *p_tete = malloc(sizeof(struct maillon));
     p_tete-> val = v ;
     p_tete -> suivant =l ;
     return p_tete;
