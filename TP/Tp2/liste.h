@@ -25,7 +25,7 @@ struct maillon* recherche(liste l, int x);
 liste supprimerListe(liste l);
 
 
-
+liste supprimer_intervalle(liste l,int idx_debut,int idx_fin);
 
 liste inserer(liste l, int val, int i);
 liste supprimerEnTete(liste l);

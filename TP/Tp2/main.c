@@ -26,6 +26,9 @@ int main () {
 
     struct timespec ts_fin;
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts_fin);
+
+    inserer(l,-1,tailles_list/2);
+
     double temps_s = ts_fin.tv_sec- ts_debut.tv_sec ;
     double temps_ns = ts_fin.tv_nsec - ts_debut.tv_nsec ;
     printf("temps (seconde): %f\n",temps_s);

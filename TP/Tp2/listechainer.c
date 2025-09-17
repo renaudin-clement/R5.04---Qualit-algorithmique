@@ -31,8 +31,8 @@ void affiche(liste l){
 
 liste insere_en_tete(liste l ,int v){
     struct maillon *p_tete = malloc(sizeof(struct maillon));
-    p_tete-> val = v ;
-    p_tete -> suivant =l ;
+    p_tete-> val = v;
+    p_tete -> suivant =l;
     return p_tete;
     
 }
@@ -62,6 +62,30 @@ struct  maillon* recherche(liste l , int x){
 
 }
 
+liste inserer(liste l ,int val,int index){
+    if (index==0)
+    {
+        return insere_en_tete(l , val);
+    }else{
+        inserer(l->suivant,val,index-1);
+        return l;
+    }
+    
+}
+
+liste inserer2(liste l ,int val,int index){
+    if (index==0)
+    {
+        return insere_en_tete(l , val);
+    }else{
+        struct maillon * maillon_insertion =l;
+        for (int j = 0; j < index-1; j++){
+            maillon_insertion = maillon_insertion ->suivant;
+        }
+        maillon_insertion->suivant = insere_en_tete(maillon_insertion->suivant,val);
+        return l;
+    }
+}
 
 /*
 int main(){
