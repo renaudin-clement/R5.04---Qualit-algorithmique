@@ -7,12 +7,14 @@ liste insere_en_tete(liste l,int i);
 
 int main () {
 
+    int nb_essais =100;
+    int tailles_list =1000;
     struct timespec ts_debut; // contient un champ tv_sec (seconde) et un champ tv_nsec (nano
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts_debut);
 
     clock_t debut = clock();
     liste l = NULL;
-    for (size_t i = 0; i < 10000; i++)
+    for (size_t i = 0; i < tailles_list; i++)
     {
         l = insere_en_tete(l, i);
     }
