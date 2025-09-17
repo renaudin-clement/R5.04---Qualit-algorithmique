@@ -6,8 +6,8 @@ struct maillon {
     struct maillon * suivant;
 };
 
-
 typedef struct maillon * liste;
+
 
 int longueur(liste l){
     if (l == NULL)

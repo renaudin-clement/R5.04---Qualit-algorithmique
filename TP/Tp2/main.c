@@ -8,7 +8,7 @@ int main () {
     liste l = NULL;
     for (size_t i = 0; i < 10000; i++)
     {
-        l = ajouterEnTete(l,i);
+        l = insere_en_tete(l,i);
     }
     clock_t fin = clock();
     double temps = (double)(fin - debut) / CLOCKS_PER_SEC;

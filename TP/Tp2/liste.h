@@ -13,26 +13,19 @@ struct maillon {
     struct maillon *suivant;
 };
 
-/**
-Une liste est constitué de son premier maillon (potentiellement vide) et
-du nombre d'élément contenus dans la liste.
-*/
-struct liste {
-    struct maillon * debut;
-    int nbElem;
-};
+// une liste est donnée par l'adresse de son
+// premier maillon (s'il existe)
+// donc le type liste est un alias de (struct maillon *)
+typedef struct maillon* liste;
 
-typedef struct maillon * liste;
+liste ajouterEnTete(liste l, int x);
+int longueur(liste l);
+struct maillon* recherche(liste l, int x);
 
-
-liste creerListe();
-
-liste insere_en_tete(liste l, int x);
-
-//void supprimerListe(lst l);
-//void inserer(lst l, int val, int i);
-//int supprimerEnTete(lst l);
-//int supprimer(lst l, int i);
-//void afficherListe(lst l);
+liste supprimerListe(liste l);
+liste inserer(liste l, int val, int i);
+liste supprimerEnTete(liste l);
+liste supprimer(liste l, int i);
+void affiche_liste(liste l);
 
 #endif

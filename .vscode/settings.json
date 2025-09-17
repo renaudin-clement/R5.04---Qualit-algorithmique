@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "listechainer": "c"
+        "listechainer": "c",
+        "liste.h": "c"
     }
 }
