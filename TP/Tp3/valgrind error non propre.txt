@@ -1,0 +1,107 @@
+==65737== Memcheck, a memory error detector
+==65737== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==65737== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==65737== Command: ./prog
+==65737== 
+==65737== Conditional jump or move depends on uninitialised value(s)
+==65737==    at 0x48E40CB: __printf_buffer (vfprintf-process-arg.c:58)
+==65737==    by 0x48E573A: __vfprintf_internal (vfprintf-internal.c:1544)
+==65737==    by 0x48DA1B2: printf (printf.c:33)
+==65737==    by 0x1091EA: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Use of uninitialised value of size 8
+==65737==    at 0x48D90BB: _itoa_word (_itoa.c:183)
+==65737==    by 0x48E3C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==65737==    by 0x48E573A: __vfprintf_internal (vfprintf-internal.c:1544)
+==65737==    by 0x48DA1B2: printf (printf.c:33)
+==65737==    by 0x1091EA: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Conditional jump or move depends on uninitialised value(s)
+==65737==    at 0x48D90CC: _itoa_word (_itoa.c:183)
+==65737==    by 0x48E3C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==65737==    by 0x48E573A: __vfprintf_internal (vfprintf-internal.c:1544)
+==65737==    by 0x48DA1B2: printf (printf.c:33)
+==65737==    by 0x1091EA: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Conditional jump or move depends on uninitialised value(s)
+==65737==    at 0x48E3D85: __printf_buffer (vfprintf-process-arg.c:186)
+==65737==    by 0x48E573A: __vfprintf_internal (vfprintf-internal.c:1544)
+==65737==    by 0x48DA1B2: printf (printf.c:33)
+==65737==    by 0x1091EA: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Conditional jump or move depends on uninitialised value(s)
+==65737==    at 0x48E40CB: __printf_buffer (vfprintf-process-arg.c:58)
+==65737==    by 0x48E573A: __vfprintf_internal (vfprintf-internal.c:1544)
+==65737==    by 0x48DA1B2: printf (printf.c:33)
+==65737==    by 0x109206: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Conditional jump or move depends on uninitialised value(s)
+==65737==    at 0x48E3D85: __printf_buffer (vfprintf-process-arg.c:186)
+==65737==    by 0x48E573A: __vfprintf_internal (vfprintf-internal.c:1544)
+==65737==    by 0x48DA1B2: printf (printf.c:33)
+==65737==    by 0x109206: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Invalid write of size 4
+==65737==    at 0x10922F: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737==  Address 0x4a8f068 is 0 bytes after a block of size 40 alloc'd
+==65737==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x1091CD: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Invalid read of size 4
+==65737==    at 0x10923D: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737==  Address 0x4a8f068 is 0 bytes after a block of size 40 alloc'd
+==65737==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x1091CD: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Invalid free() / delete / delete[] / realloc()
+==65737==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x10927F: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737==  Address 0x4a8f4f0 is 0 bytes inside a block of size 4 free'd
+==65737==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x109273: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737==  Block was alloc'd at
+==65737==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x109263: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== Invalid read of size 4
+==65737==    at 0x1092A8: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737==  Address 0x4a8f540 is 0 bytes inside a block of size 4 free'd
+==65737==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x1092A3: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737==  Block was alloc'd at
+==65737==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x109289: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+*** stack smashing detected ***: terminated
+==65737== 
+==65737== Process terminating with default action of signal 6 (SIGABRT)
+==65737==    at 0x4918B2C: __pthread_kill_implementation (pthread_kill.c:44)
+==65737==    by 0x4918B2C: __pthread_kill_internal (pthread_kill.c:78)
+==65737==    by 0x4918B2C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==65737==    by 0x48BF27D: raise (raise.c:26)
+==65737==    by 0x48A28FE: abort (abort.c:79)
+==65737==    by 0x48A37B5: __libc_message_impl.cold (libc_fatal.c:134)
+==65737==    by 0x49B0C48: __fortify_fail (fortify_fail.c:24)
+==65737==    by 0x49B1ED3: __stack_chk_fail (stack_chk_fail.c:24)
+==65737==    by 0x1092D8: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== HEAP SUMMARY:
+==65737==     in use at exit: 1,064 bytes in 2 blocks
+==65737==   total heap usage: 4 allocs, 3 frees, 1,072 bytes allocated
+==65737== 
+==65737== 40 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==65737==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==65737==    by 0x1091CD: main (in /home/iut45/Etudiants/o22300833/Documents/R5.04 Qualité Algorithmique/TP/Tp3/prog)
+==65737== 
+==65737== LEAK SUMMARY:
+==65737==    definitely lost: 40 bytes in 1 blocks
+==65737==    indirectly lost: 0 bytes in 0 blocks
+==65737==      possibly lost: 0 bytes in 0 blocks
+==65737==    still reachable: 1,024 bytes in 1 blocks
+==65737==         suppressed: 0 bytes in 0 blocks
+==65737== Reachable blocks (those to which a pointer was found) are not shown.
+==65737== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==65737== 
+==65737== Use --track-origins=yes to see where uninitialised values come from
+==65737== For lists of detected and suppressed errors, rerun with: -s
+==65737== ERROR SUMMARY: 13 errors from 11 contexts (suppressed: 0 from 0)

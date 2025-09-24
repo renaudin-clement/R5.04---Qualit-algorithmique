@@ -1,0 +1,27 @@
+==73185== Memcheck, a memory error detector
+==73185== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==73185== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==73185== Command: ./prog
+==73185== Parent PID: 60816
+==73185== 
+==73185== Invalid write of size 4
+==73185==    at 0x1091EB: main (valgrindcorriger.c:15)
+==73185==  Address 0x4a8f068 is 0 bytes after a block of size 40 alloc'd
+==73185==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==73185==    by 0x1091CD: main (valgrindcorriger.c:9)
+==73185== 
+==73185== Invalid read of size 4
+==73185==    at 0x109247: main (valgrindcorriger.c:24)
+==73185==  Address 0x4a8f068 is 0 bytes after a block of size 40 alloc'd
+==73185==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==73185==    by 0x1091CD: main (valgrindcorriger.c:9)
+==73185== 
+==73185== 
+==73185== HEAP SUMMARY:
+==73185==     in use at exit: 0 bytes in 0 blocks
+==73185==   total heap usage: 4 allocs, 4 frees, 1,072 bytes allocated
+==73185== 
+==73185== All heap blocks were freed -- no leaks are possible
+==73185== 
+==73185== For lists of detected and suppressed errors, rerun with: -s
+==73185== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
