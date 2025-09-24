@@ -34,5 +34,6 @@ int main () {
     printf("temps (seconde): %f\n",temps_s);
     printf("temps (nanoseconde): %f\n",temps_ns);
     printf("temps: %f\n",temps_s + temps_ns*1e-9);
+    printf("banane\n");
 }
 
