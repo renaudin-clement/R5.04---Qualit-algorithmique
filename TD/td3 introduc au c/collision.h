@@ -12,6 +12,6 @@ sprite{
 
 };
 
-struct sprite sprite_aleatoire(int w ,int h);
+struct sprite sprite_aleatoire(int w ,int h){}
 
-int compte_collision(struct sprite sprites[], unsigned int nb_sprites);
+int compte_collision(struct sprite sprites[], unsigned int nb_sprites){}
