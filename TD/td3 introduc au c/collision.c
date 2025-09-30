@@ -57,3 +57,20 @@ complexiter de la detecte de collision avec un quartree chaque rectangle est com
 au plus k-1 au trees complexité o(1) par rectangle soit o(n) une fois le quartree construit
 */
 
+int estFeuille(struct noeud_QT n){
+    return n.enfants[0]==NULL;
+}
+
+int nbcollisionQuartree(struct noeud_QT n){
+    int somme = 0 ;
+    if (estFeuille(n)){
+        for (int i =0;i<3;i++){
+            somme += compte_collision(n.sprites[i],3);
+        }
+    }else{
+        for (int i =0;i<4;i++){
+             somme += nbcollisionQuartree(n.enfants[i]);
+        }
+    }
+    return somme;
+}
