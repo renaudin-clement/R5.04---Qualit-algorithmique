@@ -15,3 +15,5 @@ sprite{
 struct sprite sprite_aleatoire(int w ,int h){}
 
 int compte_collision(struct sprite sprites[], unsigned int nb_sprites){}
+
+struct  noeud_QT{};

@@ -52,3 +52,8 @@ struct sprite * sprites[3];     //24 octets
 typedef noeud_QT * quartree;
 //sizeof(struct  noeud_QT)=72;
 
+/*
+complexiter de la detecte de collision avec un quartree chaque rectangle est composer avec 
+au plus k-1 au trees complexité o(1) par rectangle soit o(n) une fois le quartree construit
+*/
+
