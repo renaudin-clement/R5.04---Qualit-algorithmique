@@ -40,3 +40,15 @@ struct sprite sprite_aleatoire(int w ,int h){
     res.len_chemin_incone =0;
     return res;
 }
+
+struct  noeud_QT{
+
+struct noeud_QT * enfants[4];   //64 octets
+int xg,yh,xd,yb;                //16 octets
+struct sprite * sprites[3];     //24 octets
+
+};
+
+typedef noeud_QT * quartree;
+//sizeof(struct  noeud_QT)=72;
+
