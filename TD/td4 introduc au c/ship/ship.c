@@ -7,14 +7,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <time.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL_ttf.h>
+
+#include "collision.h"
 
 #define tailleFenetreH		400
 #define tailleFenetreW	640
-#define nbAsteroids		500
+#define nbAsteroids		3
 #define vitesseShip			2
 
 // Creation de la fenetre et du canvas de la fenetre
@@ -131,7 +133,7 @@ int main()
 			SDL_RenderCopy(renderer, tabAstro[i].texture,NULL,&tabAstro[i].position);
 			if (tabAstro[i].position.y > tailleFenetreH) tabAstro[i].position.y = -32;
 
-			nbCollisions += SDL_HasIntersection(&shipPosition,&tabAstro[i].position);			
+			nbCollisions += My_HasIntersection(&shipPosition,&tabAstro[i].position);			
 		}
 		
 		SDL_RenderCopy(renderer, texShip,NULL,&shipPosition);
@@ -162,3 +164,6 @@ int main()
 	SDL_Quit();
 	exit(0);
 }
+
+
+//gcc ship.c -o ship $(sdl2-config --cflags --libs) -lSDL2_image -lSDL2_ttf

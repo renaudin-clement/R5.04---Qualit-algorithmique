@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "listechainer": "c",
-        "liste.h": "c"
+        "liste.h": "c",
+        "sdl_image.h": "c",
+        "sdl_ttf.h": "c",
+        "stdio.h": "c"
     }
 }
