@@ -19,6 +19,8 @@
 #define nbAsteroids		3
 #define vitesseShip			2
 
+float acces= 1.75;
+
 // Creation de la fenetre et du canvas de la fenetre
 int init(SDL_Window ** mafenetre, SDL_Renderer * canvas, SDL_Renderer ** renderer)
 {
@@ -112,16 +114,17 @@ int main()
 				break;
 				
 				case SDL_KEYDOWN:
-                if(event.key.keysym.sym == SDLK_UP) shipPosition.y -= vitesseShip;
-                if(event.key.keysym.sym == SDLK_DOWN) shipPosition.y+= vitesseShip;
-                if(event.key.keysym.sym == SDLK_RIGHT) shipPosition.x+= vitesseShip;
-                if(event.key.keysym.sym == SDLK_LEFT) shipPosition.x-= vitesseShip;
-                if(event.key.keysym.sym == SDLK_ESCAPE) fin = 1;					
+                if(event.key.keysym.sym == SDLK_UP) shipPosition.y -= vitesseShip *acces && acces = acces *1.2 ;
+                if(event.key.keysym.sym == SDLK_DOWN) shipPosition.y+= vitesseShip *acces && acces = acces *1.2;
+                if(event.key.keysym.sym == SDLK_RIGHT) shipPosition.x+= vitesseShip *acces && acces = acces *1.2;
+                if(event.key.keysym.sym == SDLK_LEFT) shipPosition.x-= vitesseShip *acces && acces = acces *1.2;
+                if(event.key.keysym.sym == SDLK_ESCAPE) fin = 1;
+				else(acces =1.75);					
 				break;
 			}
 		}
 
-		int nbCollisions = 0;
+		int nbCollisions=0;
 		for (int i = 0; i < nbAsteroids; i++)
 		{
 			tabAstro[i].delay ++;
