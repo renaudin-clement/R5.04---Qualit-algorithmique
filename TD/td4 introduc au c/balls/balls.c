@@ -15,7 +15,7 @@
 
 #define tailleFenetreH		400
 #define tailleFenetreW	640
-#define nbBalls				50
+#define nbBalls				25
 
 // Creation de la fenetre et du canvas de la fenetre
 int init(SDL_Window ** mafenetre, SDL_Renderer * canvas, SDL_Renderer ** renderer)
