@@ -90,9 +90,9 @@ int nbCollisionAvecBalle(struct qTreeNode *t,SDL_Rect tous_sprites[],SDL_Rect *b
     if (!(SDL_HasIntersection(&(t->area),balle))){
         return 0;
     }    
+    int nbCollision =0;
     if(t->enfants[0 ]!= NULL){
-        nbCollision=0;
-        for (init i=0;i<4;i++){
+        for (int i=0;i<4;i++){
             nbCollision += nbCollisionAvecBalle(t->enfants[i],tous_sprites,balle);
         
         }
@@ -100,7 +100,7 @@ int nbCollisionAvecBalle(struct qTreeNode *t,SDL_Rect tous_sprites[],SDL_Rect *b
     }
 
     for(int i =0;i<t->nbSprites;i++){
-        nbCollision += detectBallCollision(balle,tous_sprites, &tous_sprites[t->sprites[i]]); //algorythme de collision de cercle
+        nbCollision += nbCollisionAvecBalle(t,tous_sprites, &tous_sprites[t->sprites[i]]); //algorythme de collision de cercle
     }
     return nbCollision;
 }
