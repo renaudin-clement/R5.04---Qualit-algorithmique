@@ -5,6 +5,8 @@
 	gcc -Wall balls.c -o balls $(sdl2-config --cflags --libs) -lSDL2_image -lSDL2_ttf
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
