@@ -86,8 +86,22 @@ void liberer_qtree(struct qTreeNode *t){
 }
 
 
-int nbCollisionAvecBalle(struct qTreeNode *t,SDL_Rect *balle){
+int nbCollisionAvecBalle(struct qTreeNode *t,SDL_Rect tous_sprites[],SDL_Rect *balle){
     if (!(SDL_HasIntersection(&(t->area),balle))){
         return 0;
     }    
+    if(t->enfants[0 ]!= NULL){
+        nbCollision=0;
+        for (init i=0;i<4;i++){
+            nbCollision += nbCollisionAvecBalle(t->enfants[i],tous_sprites,balle);
+        
+        }
+        return nbCollision;
+    }
+
+    for(int i =0;i<t->nbSprites;i++){
+        nbCollision += detectBallCollision(balle,tous_sprites, &tous_sprites[t->sprites[i]]); //algorythme de collision de cercle
+    }
+    return nbCollision;
 }
+
