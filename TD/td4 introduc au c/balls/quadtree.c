@@ -74,4 +74,20 @@ struct qTreeNode *creer_qtree(
 }
 
 // TODO
-void liberer_qtree(struct qTreeNode *t);
+void liberer_qtree(struct qTreeNode *t){
+    if (t->enfants[0] = NULL){
+
+        for (int i = 0; i < 4; i++)
+        {
+            liberer_qtree(t->enfants[i]);
+        }
+    }
+    free(t);
+}
+
+
+int nbCollisionAvecBalle(struct qTreeNode *t,SDL_Rect *balle){
+    if (!(SDL_HasIntersection(&(t->area),balle))){
+        return 0;
+    }    
+}
