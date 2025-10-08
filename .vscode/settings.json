@@ -5,6 +5,7 @@
         "sdl_image.h": "c",
         "sdl_ttf.h": "c",
         "stdio.h": "c",
-        "qtree.C": "cpp"
+        "qtree.C": "cpp",
+        "sdl.h": "c"
     }
 }
